@@ -1,0 +1,86 @@
+img {
+    /* margin: 1px; */
+    /* margin-right: 10px; */
+    width: 400px;
+    height: 350px;
+}
+
+
+/* .row {
+    margin-right: 50px;
+} */
+
+.container .form-group {
+    width: 50%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 0px;
+    /* background-color: rgb(25, 115, 250); */
+}
+
+.logo img {
+    width: 5%;
+    height: 3%;
+    /* margin-left: 20px; */
+    /* position: absolute; */
+}
+
+nav img {
+    width: 5%;
+    height: 2%;
+    margin: 10px;
+}
+
+input[type="submit"] {
+    background-color: lightcyan;
+    color: blue;
+    border-radius: 15px;
+}
+
+.logo #img {
+    margin-right: 0 !important;
+}
+
+form input,
+form textarea {
+    width: 250px;
+}
+
+.img__wrap {
+    position: relative;
+    width: 400px;
+    height: 350px;
+}
+
+.img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: x-large;
+    background: blue;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .5s;
+}
+
+.img__description button {
+    border-radius: 20px;
+    font-size: small;
+}
+
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+}

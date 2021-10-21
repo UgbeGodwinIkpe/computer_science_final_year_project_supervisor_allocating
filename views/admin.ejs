@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Project Supervisor Allocator</title>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top" style="color: white;">
+        <img src="../images/cscLogo.jpg" alt="C.Sc" id="img">
+        <a class="navbar-brand" href="/" style="color: white; font-size:xx-large; font-weight:bolder; margin-left:20px">Project Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+     </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="/" style="color: white;"><i
+                              class="fa fa-home"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown pulled-right" style="margin-right: 20px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;"><i
+                              class="fa fa-user"></i>
+                         Admin Management
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a href="/addSupervisor" class="dropdown-item">Add Supervisor</a>
+                        <a href="#" class="dropdown-item">Send Reminder</a>
+                        <a href="#" class="dropdown-item">Public project topics</a>
+                    </div>
+                </li>
+        </div>
+        <img src="../images/crutechLogo.jpg" alt="CRUTECH LOGO">
+    </nav>
+    <div class="container">
+        <% if(msg != ''){%>
+            <div class='container alert alert-success alert-dismissible' style="width: fit-content; height: fit-content; font-size: large;">
+                <%-msg %>
+                    <a href="#" class="close" id="close" data-dismiss="alert" aria-label="close" style="margin-left: 20px;">&times;</a>
+            </div>
+            <%}%>
+                <h4>Welcome to Admin page!</h4>
+                <h6>What do you want to do?</h6>
+                <div class="container" style="display: flex;">
+                    <button style="border-radius: 15px; margin: 5px;"><a href="/addSupervisor">Add Supervisor</a></button>
+                    <button style="border-radius: 15px; margin: 5px;"><a href="#">Send Announcement</a></button>
+                    <button style="border-radius: 15px; margin: 5px;"><a href="#">Print/Public students' project topics and supervisors</a></button>
+                </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div class="container">
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!-- <script src="../script.js"></script> -->
+</body>
+
+</html>

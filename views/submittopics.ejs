@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Project Supervisor Allocator</title>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top" style="color: white;">
+        <img src="../images/cscLogo.jpg" alt="C.Sc" id="img">
+        <a class="navbar-brand" href="/" style="color: white; font-size:xx-large; font-weight:bolder; margin-left:20px">Project Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+     </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="/" style="color: white;"><i
+                              class="fa fa-home"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown pulled-right" style="margin-right: 20px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;"><i
+                              class="fa fa-book"></i>
+                         Student's Project
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <a class="dropdown-item" href="/registerproject">Register Project Topics</a>
+                        <a class="dropdown-item" href="/projectsupervisor">My Project Supervisor</a>
+                        <!-- <a class="dropdown-item" href="">Sign up</a> -->
+                    </div>
+                </li>
+        </div>
+        <img src="../images/crutechLogo.jpg" alt="CRUTECH LOGO">
+    </nav>
+    <div class="container">
+        <% if(error != ''){%>
+            <div class='container alert alert-danger alert-dismissible' style="width: fit-content; height: fit-content; font-size: large;">
+                <%-error %>
+                    <a href="#" class="close" id="close" data-dismiss="alert" aria-label="close" style="margin-left: 20px; margin-right: 0;">&times;</a>
+            </div>
+            <%}%>
+                <!-- success messages for contact form -->
+                <% if(msg != ''){%>
+                    <div class='container alert alert-success alert-dismissible' style="width: fit-content; height: fit-content; font-size: large;">
+                        <%-msg %>
+                            <a href="#" class="close" id="close" data-dismiss="alert" aria-label="close" style="margin-left: 20px;">&times;</a>
+                    </div>
+                    <%}%>
+                        <div class="container form-group">
+                            <h2>Submit 3(three) choosen project topics to your supervisor</h2>
+                            <form method="post" action="/submittopics">
+                                <div class="form-control">
+                                    <label for="regNumber">Reg. Number</label>
+                                    <input type="text" name="regNumber" id="regNumber" placeholder="Enter your Reg number...">
+                                </div>
+                                <div class="form-control">
+                                    <label for="supName">Supervisor Name</label>
+                                    <input type="text" name="supName" id="supName" placeholder="Enter the name of your supervisor...">
+                                </div>
+                                <h5>Project Topics</h5>
+                                <div class="form-control">
+                                    <label for="topic1">Topic 1</label>
+                                    <textarea type="text" name="topic1" id="topic1"></textarea>
+                                </div>
+                                <div class="form-control">
+                                    <label for="topic2">Topic 2</label>
+                                    <textarea type="text" name="topic2" id="topic2"></textarea>
+                                </div>
+                                <div class="form-control">
+                                    <label for="topic3">Topic 3</label>
+                                    <textarea type="text" name="topic3" id="topic3"></textarea>
+                                </div>
+                                <div class="form-control">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </form>
+
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                        <div class="container">
+
+
+                        </div>
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+                        <!-- <script src="../script.js"></script> -->
+</body>
+
+</html>
